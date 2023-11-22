@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:goldenrod;
+    padding-bottom: 20px;
+}
+header h1 {
+    font-size: 50px;
+    font-style: italic;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+header h1 span {
+    color:goldenrod;
+}
+header p {
+    margin: 10px;
+    position: relative;
+    bottom: 30px;
+}
+header input {
+    width: 95%;
+    height: 40px;
+    padding: 0 15px 0 15px;
+    border: none;
+    font-size: 15px;
+    border-radius: 20px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.625s;
+}
+li {
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    transition-duration: 0.625s;
+    opacity: 1;
+}
+li:hover {
+    border: 3px solid goldenrod;
+    transition-duration: 0.3125s;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+li.excluded {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    border: none;
+    border-radius: 0;
+    transition-duration: 0.625s;
+    opacity: 0;
+}
+img {
+    height: 300px;
+    transition-duration: 0.625s;
+}
+li.excluded img {
+    height: 0;
+    transition-duration: 0.625s;
+}
+h2 {
+    font-size: 25px;
+    text-align: center;
+    transition-duration: 0.625s;
+}
+li.excluded h2 {
+    font-size: 0;
+    transition-duration: 0.625s;
+}
+div.error {
+    display: none;
+    text-align: center;
+}
+.error h1, p {
+    color: goldenrod;
+    opacity: 1;
+}
+.error p {
+    opacity: 0.7;
+}
+
+@media all and (max-width: 600px) {
+    header {
+        padding-bottom: 5px;
+    }
+    header h1 {
+        background-color: transparent;
+        margin-top: 0px;
+    }
+    header h1 span {
+        color: white;
+    }
+    header span.logo {
+        display: none;
+    }
+    header p {
+        display: none;
+    }
+    header input {
+        width: 90vw;
+        border-radius: 0;
+        margin-bottom: 0;
+    }
+    main {
+        flex-direction: column;
+    }
+    ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    ul li {
+        width: 80vw;
+    }
+}
